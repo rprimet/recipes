@@ -20,7 +20,7 @@ requirements:
   host:
     - python
     - pip
-    - libgit2>=1.5.0
+    - libgit2
   run:
     - python
 
