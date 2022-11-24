@@ -15,4 +15,5 @@ build:
 requirements:
   build:
     - "{{ compiler('c') }}"
-
+    - make
+    - cmake
