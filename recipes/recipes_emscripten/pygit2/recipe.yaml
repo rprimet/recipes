@@ -1,0 +1,31 @@
+context:
+  version: "1.11.1"
+
+
+package:
+  name: pygit2
+  version: "{{ version }}"
+
+source:
+  url: https://pypi.io/packages/source/p/pygit2/pygit2-{{ version }}.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - cross-python_emscripten-32
+    - "{{ compiler('c') }}"
+  host:
+    - python
+    - pip
+  run:
+    - python
+
+extra:
+  emscripten_tests:
+    python:
+      pytest_files:
+      - test_import_pygit2.py
+
