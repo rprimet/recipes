@@ -17,12 +17,16 @@ requirements:
     - python
     - cross-python_emscripten-32
     - "{{ compiler('c') }}"
+    - cffi
   host:
     - python
     - pip
     - libgit2
+    - cffi
   run:
     - python
+    - libgit2
+    - cffi
 
 extra:
   emscripten_tests:
